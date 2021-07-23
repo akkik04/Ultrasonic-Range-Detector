@@ -39,7 +39,7 @@ void loop() {
   distance = sensor.ping_cm();
 
   // if-statement for handling error with the sensor out of range.
-  if (distance >= 400){
+  if (distance <= 2 || distance >= 400) {
 
     // code to inform the user that the measurement is failed if the condition is met.
     lcd.clear();
